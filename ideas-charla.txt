@@ -1,25 +1,3 @@
-cambiar foto peña oficina trabe
-
-cambiar índice :D
-
-no silver bullet:
-  - arquitectura
-  - tecnología
-  - lenguaje
-  - herramientas
-
-No optimizar rendimiento sino simplicidad
-  Diferencia entre simple y fácil
-
-
-
-infierno dependencias
-  docker máquinas virtuales
-
-OO es más que objetos y clases. Las clases kk.
-  poliformismo
-
-Funciones y HOFs
 
 No silver bullets anyway
 

@@ -1,0 +1,60 @@
+section h1,
+section h2 {
+    color: red;
+}
+
+section:not(.full-image) img {
+    max-width: 800px;
+}
+
+#sdat {
+    font-size: 25px;
+}
+
+#sdat li {
+    font-size: 1.5em;
+}
+
+.front-page .invisible {
+    line-height: 1.5em;
+    visibility: hidden;
+}
+
+.front-page .magno {
+    line-height: 1.5em;
+    font-size: 200%;
+}
+
+.front-page {
+  background: #0074D9;
+}
+
+.front-page h1 {
+  color: #fff;
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.who p {
+    text-align: center;
+    font-size: 150%;
+}
+
+.who strong {
+    font-size: 150%;
+}
+
+#sdat .toc {
+}
+
+.chain-bullets ul {
+    list-style: none;
+}
+
+.chain-bullets ul li {
+    text-align: center;
+}
+
+#sdat .quote p {
+    font-size: 1em;
+}

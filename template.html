@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--
-      OK, name your slides:
-    -->
-    <title>SlidePack template</title>
+    <title>Software Development at Trabe 2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--
-    Ubuntu font FTW. Remove this comment to use it (if present, SlidePack will
-    use this font for headings).
-
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
-    -->
-
-    <!-- SlidePack basic stylesheets and theme -->
     <link rel="stylesheet" type="text/css" href="slide-pack.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
   </head>
-  <body>
+  <body id="sdat">
 
 <textarea data-slide-pack>
 
--- cover
+-- front-page
 
-# Software Development at Trabe
+# Software Development at Trabe<br><span class="invisible magno">2</span>
 
--- image
+-- front-page
 
-![Who we are](assets/who_we_are.png)
+# Software Development at Trabe<br><span class="magno">2</span>
 
--- image
+-- who
+
+<p>
+    **David Barral**<br>
+    david@trabesoluciones.com<br>
+    @davidbarral
+</p>
+
+<p>
+    **Asís García**<br>
+    asis@trabesoluciones.com<br>
+    @asischao
+</p>
+
+-- full-image
 
 ![Trabe](assets/trabe.png)
 
-<!--
-  a qué nos dedicamos, qué hacemos para quién, tecnologías, etc
--->
+-- full-image
 
--- image
+TODO nueva foto
 
-![Men at work](assets/men_at_work.png)
+![Men at work](assets/)
 
---
-
-# Shiny happy opinionated people
-
--- bullets toc bullets-first
+-- toc
 
 # Contents
 
-* Ideas, Methodology & Tools
-* Real life examples
-* The many hells of Computer Science
-* The "six" commandments
+* Hows & whys
+* Tools
+* Fears
 
 -- section
 
-# Ideas
+# Hows & whys
 
 -- quote
 
-# A good design is easy to change, rather than easy to configure
-## someone, somewhere
+> A good design is easy to change, rather than easy to configure
+> <cite>someone, somewhere</cite>
 
 --
 
 # There is no silver bullet
 
-## Every architecture/design solution has pros & cons
+## Every architecture has pros & cons
+
+--
+
+# There is no silver bullet
+
+## Every design has pros & cons
+
+--
+
+# There is no silver bullet
+
+## Every technology has pros & cons
+
+--
+
+# There is no silver bullet
+
+## Every language has pros & cons
+
+--
+
+# There is no silver bullet
+
+## Every tool has pros & cons
 
 --
 
@@ -76,9 +96,15 @@
 
 --
 
+# The solution should fit the problem
+
+--
+
 # Simple is better
 
--- bullets columns
+## Simple vs Easy
+
+-- two-columns no-bullet
 
 # Simple solutions are easier to:
 
@@ -91,38 +117,15 @@
 
 --
 
-## Architecture: the UNIX way
+# Architecture: the UNIX way
 
-# Orchestrate simple components, each doing one thing, <br/>and doing it well
+## Orchestrate simple components,<br> each doing one thing, <br/>and doing it well
 
 --
 
-# Design: SOLID rock
+# Design: SOLID
 
 ## KISS & DRY driven
-
-<!--
-
-son de OO pero aplicables a otro tipo de paradigmas
-
-
-Single responsibility principle
-  a class should have only a single responsibility.
-
-Open/closed principle
-  “software entities … should be open for extension, but closed for modification”.
-
-Liskov substitution principle
-  “objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program”. See also design by contract.
-
-Interface segregation principle
-  “many client-specific interfaces are better than one general-purpose interface.”[5]
-
-Dependency inversion principle
-  one should “Depend upon Abstractions. Do not depend upon concretions.”[5]
-  Dependency injection is one method of following this principle.
--->
-
 
 --
 
@@ -131,40 +134,12 @@ Dependency inversion principle
 
 --
 
-# SOLID leads to Design Patterns
-## (Designs patterns are SOLID)
-
--- image
-
-![Be OO, my friend](assets/be_oo_my_friend.png)
-
-<!--
-  Sigue lo SOLID y encapuslación y todo esto en cualquier lenguaje/paradigma que te irá mejor :D
--->
-
--- bullets bullets-first
-
 # Other useful buzzwords
 
 * YAGNI
 * CoC
 
-
--- code smallest
-
-    <action path="/admin/ShowConfiguration"
-      type="controller.admin.ShowConfigurationAction"
-      scope="request">
-      <forward name="success" 
-               path=".admin.ShowConfiguration"/>
-    </action>
-
--- image
-
-![Y U NO admin.ShowConfiguration](assets/yu_no_admin_showconfiguration.png)
-
-
--- bullets columns title-first
+-- two-columns
 
 # TEST, TEST, TEST
 
@@ -175,16 +150,31 @@ Dependency inversion principle
 * Refactoring
 * CI
 
-<!--
-  DI -> Dependency Injection
-  Test complicado <-> código mal diseñado
-  Test -> Definir el api desde el punto de vista del "cliente"
-  Statist vs Mockist (Mock what you own)
--->
+-- full-image
 
--- image
+TODO FIX dimmensions
 
 ![Every time god kills a kitten](assets/god_kitten.png)
+
+--
+
+# True OO
+
+* composition vs hierarchy
+* polimorfism: if-less code
+* "el entramado de vínculos"
+
+--
+
+# Immutability
+
+--
+
+# Back to the function
+
+* Data (structure)
+* Behaviour
+
 -- section
 
 # Methodology
@@ -195,94 +185,65 @@ Dependency inversion principle
 
 ## Agile, sort of __: )__
 
--- bullets bullets-first
+-- 
 
 # Project management
 
 * Weekly meetings
-* Kanban
 * Postmortem
+* Simple tools
 
--- image
+--
 
-![Trabeboard](assets/trabeboard.png)
+TODO new trabeboard!
+![Trabeboard](assets/)
 
-<!--
-  Columnas, restricciones, calles
-  Indicadores: más proyectos en desarrollo de personal. Mala cosa.
--->
-
-
--- bullets many-bullets title-first
+--
 
 # Project development
 
-* Kanban + Scrum (sort of)
 * Continuous vs Scheduled delivery
 * TDD
 * Code reviews
 * Pair programming
 
-<!--
-  Code review: presencial vs Bitbucket
-  Pair programming: problemas chungos, formación, cansancio y ganas de no hacer nada a solas xD
--->
-
 -- section
 
 # Tools
 
--- image
+--
 
 ![Trello](assets/trello.png)
 
--- image
+--
 
 ![Git](assets/git_lol.png)
 
-<!--
-  Hablar de gitflow vs githubflow
--->
 
-
--- image
+--
 
 ![Bitbucket README](assets/bitbucket_readme.png)
 
--- image
+--
 
 ![Bitbucket Pull Request](assets/bitbucket_pull_request.png)
 
--- image
+--
 
 ![Bitbucket Pull Request Diff](assets/bitbucket_pull_request_code.png)
 
-<!--
-  Diffs y comentarios permiten code reviews asíncronas y remotas
--->
-
--- image
+--
 
 ![Confluence](assets/confluence.png)
 
-<!--
-  Compartir conocimiento. Preferir que el conocimiento específico 
-  esté como parte del README del proyecto o similar.
--->
+--
 
--- bullets bullets-first
+# DRY development
 
 * conventions
 * automation
 * scripts
 * bootstrap
-
-<!--
-  Enforcing de convenciones de código comunes, etc. Entornos parecidos, herramientas y plugins comunes. .dotfiles en github
-  Automatización de todo lo posible, setup, despliegue, tareas de mantenimiento
-  Hacemos scripts. -> Repositorio de scripts compartido
-  Facilitar el bootstrap del proyecto: README + script setup
--->
 
 -- code small terminal
 
@@ -298,49 +259,299 @@ Dependency inversion principle
 * Mocking
 * Metrics (coverage)
 
-<!--
-  Tests guiados por mocks, llevan al buen diseño
-  Mock, Factorias, Mock de 3rd parties, coverage
-  ¿¿Mockists vs State-ist??
-  Deberíamos tener CI  (-_- U)
--->
-
 -- bullets title-first
 # Conveniences
 
-* Transpilers: CoffeScript, SASS, etc.
+* Transpilers: Babel, SASS, etc.
 * Debugging tools
 * Live Reload. YAY!
 
-<!--
-  En función de la tecnología usamos herramientas
-  transpilers: escritura eficiente. Ojo al debug
-  mezclar: ej. sprokets + SASS en J2EE
--->
-
--- image
+--
 
 ![Chrome tools](assets/chrome_tools_dom.png)
 
--- image
+--
 
 ![Chrome tools](assets/chrome_tools_debugger.png)
 
--- image
+--
 
 ![Chrome tools](assets/chrome_tools_network.png)
 
 -- section
 
-# Real life examples
+# Fears
+## The many hells of Computer Science
+
+-- quote
+
+> There are only two hard things in Computer Science:<br> cache invalidation and naming things.
+> <cite>Phil Karlton</cite>
+
+--
+
+# Easy cache invalidation
+
+## LRU Caches + Auto expiring keys
+
+-- code small
+
+      class User
+        def cache_key
+          "user#" + id + "#" +
+            updated_at.to_millis
+        end
+      end
+
+
+      cache user.cache_key do
+        ...
+      end
+
+--
+
+# Easy naming
+
+## There is no easy naming. Sorry folks!
+
+--
+
+![Yao Ming](assets/yao.png)
+
+--
+
+# Maybe there are more hard things
+
+--
+
+![Mother of God](assets/mother_of_god.png)
+
+--
+
+# Encoding hell
+
+## Use UTF-8. Use iconv wisely
+
+--
+
+![Encoding](assets/encoding.png)
+
+--
+
+![Mail WAT](assets/mail_wat.png)
+
+--
+
+# Timezones, i18n, l11n, accessibility hell
+
+## Always use UTC (beware of qwirks) __:D__
+## Treat i18n, l11n and accesibility as first class citizens
+
+--
+
+# Speaking of timezones...
+
+--
+
+![TZ hell](assets/tz_hell.png)
+
+--
+
+# The money hell
+## Beware of spanish taxes and accounting
+## Use f**king cents
+
+--
+
+# The money hell <br/>a.k.a the floating point hell
+## Stick to integers. Use fixed point
+
+--
+
+![Show me the money](assets/show_me_the_money.jpg)
+
+--
+
+# Dependency hell
+## A dependency manager is not enough: e.g. npm
+## Use virtual machines (docker)
+
+--
+
+# Deployment and<br/>environments hell
+
+## Define enviroments from square one
+## Automatize deployment as much as you can
+
+--
+
+![Mina deploy](assets/mina.gif)
+
+--
+
+# Documentation/Code sync hell
+
+## Self explanatory code
+## Document APIs
+## Document wisely
+## Treat documentation as part of the code
+
+-- code smallest
+
+    /**
+     * Returns the user names in alphabetical order
+     * @returns the names
+     */
+    public String[] orderedNames() {
+      return sortAlphabetically(this.getNames());
+    }
+
+    /*
+     * Sort with quicksort algorithm
+     */
+    private String[] sortAlphabetically(String[] words) {
+      // lines of elegant yet uninteligible code ;)
+    }
+
+--
+
+# Multithreading hell
+
+## Use multi process
+## Avoid too much low level
+
+-- bullets bullets-first
+
+# Inter Process Communication
+
+* Unix Sockets
+* Queues
+* Shared memory
+
+--
+
+# Or use an abstraction:
+ * actors
+ * promises
+ * CSP
+# Or switch to erlang :P
+
+
+-- bullets title-first
+
+# Fragmentation hell
+
+* Do your HTML5/CSS3/JS homework (it's all code!)
+* Know how to tame browsers
+* Know how to tame mobile
+
+--
+
+![Bitbucket Ok](assets/bit_ok.png)
+
+--
+
+![Bitbucket full](assets/bit_bad.png)
+
+--
+
+![Bitbucket Android](assets/bit_android.png)
+
+--
+
+# MVC Inception
+
+## Inside an MVC webapp there is another MVC
+
+-- section
+
+# The "six" commandments
+## Parting note
+
+
+-- chain-bullets
+# SOLID (SRP in particular)
+
+* &#x2193;
+* Simple
+* &#x2193;
+* Easy to change
+* &#x2193;
+* Happiness __\\(^o^)/__
+
+-- chain-bullets
+# YAGNI
+
+* &#x2193;
+* Simple
+* &#x2193;
+* Easy to change
+* &#x2193;
+* Happiness __\\(^o^)/__
+
+-- chain-bullets
+
+# TESTs
+
+* &#x2193;
+* YAGNI + SOLID
+* &#x2193;
+* Simple
+* &#x2193;
+* Easy to change
+* &#x2193;
+* Happiness __\\(^o^)/__
+
+-- chain-bullets
+
+# Refactor (code and tests)
+
+* &#x2193;
+* Better code & tests
+* &#x2193;
+* ... 
+* &#x2193;
+* Happiness __\\(^o^)/__
+
+--
+
+# DRY more than your code
+
+## Automatize, share, extract
+
+--
+
+## The most important commandment
+
+# Do what feels right!
+
+--
+
+
+##These slides were brought to you by
+
+#[SlidePack](http://trabe.github.io/slide-pack)
+
+--
+
+# Do your EOM projects at Trabe
+
+--
+
+# Questions?
+
+-- full-image
+
+![Hasta la vista baby](assets/hasta_la_vista_baby.png)
+
+-- section
+
+# ENCORE
+## Real life examples
 
 -- section
 
 # FEDERICO
-
-<!--
-Ejemplo de arquitectura para integrar múltiples aplicaciones
--->
 
 -- problem
 
@@ -357,28 +568,13 @@ Ejemplo de arquitectura para integrar múltiples aplicaciones
 * Orchestrate services (Service Bus)
 * Single Sign On
 
--- image
+--
 
 ![Federico ideal](assets/federico_ideal.jpg)
 
-<!--
-Solución ideal:
-Federacion de autenticacion
-Bus + Pull+Push + Operaciones WS
-Webs diferentes tecnologías consumen WS
--->
-
--- image
+--
 
 ![Federico full](assets/federico_full.jpg)
-
-<!--
-Solución de compromiso
-Sólo Pull, Tareas periódicas para push
-Adaptadores: BD, LDAP, WS, Comandos SSH, etc.
-
-RObot de keystroke xDDDD :p
--->
 
 -- bullets bullets-first
 
@@ -386,10 +582,6 @@ RObot de keystroke xDDDD :p
 
 * Java stack
 * Ruby for automation
-
-<!--
-Herramientas de build y despliegue específicas: Rake
--->
 
 -- section
 
@@ -401,14 +593,10 @@ Herramientas de build y despliegue específicas: Rake
 
 ## Laboratory Management System
 
--- image
+--
 
 ![NeoSAI design](assets/neosai_design.jpg)
 
-
-<!--
-  También hay serializadores: decoradores específicos :D
--->
 
 -- problem
 
@@ -441,13 +629,9 @@ Herramientas de build y despliegue específicas: Rake
 * SSO
 * UI integration via IFrame +<br/>HTML5 PubSub
 
--- image
+--
 
 ![SAI Integration](assets/sai_integration.jpg)
-
-<!--
-  Ojo al consumo bidireccional de APIses
--->
 
 -- problem
 
@@ -462,7 +646,7 @@ Herramientas de build y despliegue específicas: Rake
 * Ad hoc REST API
 * Mail vacuums
 
--- image
+--
 
 ![testo_wamp](assets/testo_wamp.jpg)
 
@@ -478,15 +662,9 @@ Herramientas de build y despliegue específicas: Rake
 
 ## Wrapper + REST API
 
--- image
+--
 
 ![Mail wrapper](assets/mail_wrapper.jpg)
-
-<!--
-  ventaja, no tenemos que tocar las aplicaciones, SRP
-  desventaja, rendimiento, alternativa: interceptar el envío
-  desde la librería (dos intercepciones diferentes :c )
--->
 
 -- problem
 
@@ -583,9 +761,6 @@ Herramientas de build y despliegue específicas: Rake
 * Avoid null errors
 * Improves testability
 
-<!-- No ramas -> menos tests -> SRP -->
-
-
 -- code smallest
 
     class User
@@ -636,7 +811,7 @@ Herramientas de build y despliegue específicas: Rake
 * Inject user with role dependent methods to access the model
 * Similar to State pattern (sort of)
 
--- image
+--
 
 ![User roles](assets/user_roles.jpg)
 
@@ -645,12 +820,6 @@ Herramientas de build y despliegue específicas: Rake
 # DCI
 
 ## Data, Context, Interaction
-
-<!--
-Llegamos a la arquitectura a través de mirar el DCI
-explicar el DCI con ejemplo de transferencia entre cuentas (con diag)
-No lo usamos tal cual por limitaciones tecnológicas.
--->
 
 -- code small
 
@@ -709,10 +878,6 @@ No lo usamos tal cual por limitaciones tecnológicas.
 * One or multiple decorators
 * Variant: presenter pattern
 
-<!--
-  Recomentar as needed lo de los serializadores :D
--->
-
 -- code smallest
 
     class User
@@ -753,14 +918,9 @@ No lo usamos tal cual por limitaciones tecnológicas.
 # Solution
 * External Indexer (REST API)
 
--- image
+--
 
 ![Indexer](assets/indexer.jpg)
-
-<!--
-  Ventaja: transparencia, independencia de BD
-  Problema: transaccionalidad
--->
 
 -- problem
 
@@ -774,308 +934,12 @@ No lo usamos tal cual por limitaciones tecnológicas.
 * Jobs queues
 * Jobs executor
 
--- image
+--
 
 ![Background Jobs](assets/bg_jobs.jpg)
 
-<!--
-  Escalabilidad
-  Linealizar tiempo de respuesta de la app
-  Problema: persistencia de jobs. Gestión de error/repetición.
-    Infraestructura para recupearar los resultados
--->
--- section
-
-# The many hells of Computer Science
-
-<!-- you can explain that -->
-
--- quote
-
-# There are only two hard things in Computer Science: cache invalidation and naming things.
-## Phil Karlton
-
---
-
-# Easy cache invalidation
-
-## LRU Caches + Auto expiring keys
-
--- code small
-
-      class User
-        def cache_key
-          "user#" + id + "#" +
-            updated_at.to_millis
-        end
-      end
-
-
-      cache user.cache_key do
-        ...
-      end
-
-
---
-
-# Easy naming
-
-## There is no easy naming. Sorry folks!
-
--- image
-
-![Yao Ming](assets/yao.png)
-
---
-
-# Maybe there are more hard things
-
--- image
-
-![Mother of God](assets/mother_of_god.png)
-
---
-
-# Encoding hell
-
-## Use UTF-8. Use iconv wisely
-
--- image
-
-![Encoding](assets/encoding.png)
-
--- image
-
-![Mail WAT](assets/mail_wat.png)
-
-<!--
-  Ejemplo de cosa incontrolable
--->
-
---
-
-# Timezones, i18n, l11n, Accessibility hell
-
-## Always use UTC (beware of qwirks) __:D__
-## Treat i18n, l11n and accesibility as first class citizens
-
-
--- code smallest
-
-      # DB stores UTC. Conversion done by Rails
-      r = Report.first
-      r.created_at # => 2013-11-06 00:00:00 +0100
-      r.created_at.utc # => 2013-11-05 23:00:00 UTC
-
-      Report.where('DATE(created_at) = ?', 
-        r.created_at.to_date)
-
-      # Ooooopppps!
-      #
-      #  SELECT * FROM reports
-      #  WHERE (DATE(created_at) = '2013-11-06')
-
-<!--
-  Ejemplo de cosa controlable
--->
-
---
-
-# A test should have<br/>detected the defect __;)__
-
---
-
-# The money hell
-## Beware of spanish taxes and accounting
-## Use f**king cents
-
---
-
-# The money hell <br/>a.k.a the floating point hell
-## Stick to integers. Use fixed point
-
-<!--
-  Floats are fast in today CPUs an acceptable for
-  a lot of things (i.e. 3D graphics), but not for
-  money. For money you need 100% accurate numeric types
--->
-
--- image
-
-![Show me the money](assets/show_me_the_money.jpg)
-
-
-
---
-
-# Deployment and<br/>environments hell
-
-## Define enviroments from square one
-## Automatize deployment as much as you can
-
--- image
-
-![Mina deploy](assets/mina.gif)
-
---
-
-# Documentation/Code sync hell
-
-## Self explanatory code
-## Document APIs
-## Document wisely
-## Treat documentation as part of the code
-
-
--- code smallest
-
-    /**
-     * Returns the user names in alphabetical order
-     * @returns the names
-     */
-    public String[] orderedNames() {
-      return sortAlphabetically(this.getNames());
-    }
-
-    /*
-     * Sort with quicksort algorithm
-     */
-    private String[] sortAlphabetically(String[] words) {
-      // lines of elegant yet uninteligible code ;)
-    }
-
-
-
---
-
-# Multithreading hell
-
-## Use multi process
-## Avoid too much low level
-
--- bullets bullets-first
-
-# Inter Process Communication
-
-* Unix Sockets
-* Queues
-* Shared memory
-
---
-
-# Or use a library!
-# Or switch to erlang :P
-
-
--- bullets title-first
-
-# Fragmentation hell
-
-* Do your HTML5/CSS3/JS homework
-* SOLID also applies (SMACSS, etc)
-* Know how to tame browsers
-* Know how to tame mobile
-
--- image
-
-![Bitbucket Ok](assets/bit_ok.png)
-
--- image
-
-![Bitbucket full](assets/bit_bad.png)
-
--- image
-
-![Bitbucket Android](assets/bit_android.png)
-
---
-
-# MVC Inception
-
-## Inside an webapp MVC there is another MVC
-
-
--- section
-
-# The "six" commandments
-## Parting note
-
-
--- bullets title-first chain-bullets
-# SOLID (SRP in particular)
-
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
--- bullets title-first chain-bullets
-# YAGNI
-
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
--- bullets title-first chain-bullets
-
-# TESTs, TESTs, TESTs
-
-* &#x2193;
-* YAGNI + SOLID
-* &#x2193;
-* Simple
-* &#x2193;
-* Easy to change
-* &#x2193;
-* Happiness __\\(^o^)/__
-
--- bullets title-first chain-bullets
-
-# Refactor, Refactor, Refactor
-##(code and tests)
-
-* &#x2193;
-* Better code & tests
-* &#x2193;
-* ... 
-* &#x2193;
-* Happiness __\\(^o^)/__
-
---
-
-# DRY more than your code
-
-## Automatize, share, extract
-
---
-
-## The most important commandment
-
-# Do what feels right!
-
-<!-- EJemplo de Twitter y ; -->
--- image
-
-![Hasta la vista baby](assets/hasta_la_vista_baby.png)
-
---
-
-# Complementary reads
-## http://ir.gl/trabe-reads
-
---
-# Do your EOM projects at Trabe
-
-# Questions?
-
 </textarea>
 
-    <!-- SlidePack markdown compilation & UI goodies -->
     <script src="slide-pack.js"></script>
   </body>
 </html>
