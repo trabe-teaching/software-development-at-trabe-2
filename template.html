@@ -37,7 +37,7 @@
 
 ![Trabe](assets/trabe.png)
 
--- full-image
+-- full-image todo
 
 TODO nueva foto
 
@@ -150,7 +150,7 @@ TODO nueva foto
 * Refactoring
 * CI
 
--- full-image
+-- full-image todo
 
 TODO FIX dimmensions
 
@@ -168,12 +168,16 @@ TODO FIX dimmensions
 
 # Immutability
 
+* Avoid side effects
+* Use persistent data structures
+
 --
 
 # Back to the function
 
-* Data (structure)
-* Behaviour
+* Data 
+* Pure functions
+* Function composition
 
 -- section
 
@@ -193,16 +197,20 @@ TODO FIX dimmensions
 * Postmortem
 * Simple tools
 
---
+-- todo
 
 TODO new trabeboard!
 ![Trabeboard](assets/)
+
+-- full-width-image
+
+![Trello](assets/trello.png)
 
 --
 
 # Project development
 
-* Continuous vs Scheduled delivery
+* Continuous vs scheduled delivery
 * TDD
 * Code reviews
 * Pair programming
@@ -213,26 +221,22 @@ TODO new trabeboard!
 
 --
 
-![Trello](assets/trello.png)
-
---
-
 ![Git](assets/git_lol.png)
 
 
---
+-- full-width-image
 
 ![Bitbucket README](assets/bitbucket_readme.png)
 
---
+-- full-width-image
 
 ![Bitbucket Pull Request](assets/bitbucket_pull_request.png)
 
---
+-- full-width-image
 
 ![Bitbucket Pull Request Diff](assets/bitbucket_pull_request_code.png)
 
---
+-- full-width-image
 
 ![Confluence](assets/confluence.png)
 
@@ -240,43 +244,49 @@ TODO new trabeboard!
 
 # DRY development
 
-* conventions
-* automation
-* scripts
-* bootstrap
+* Conventions
+* Automation
+* Scripts
+* Bootstrap
 
--- code small terminal
+--
 
     $ git clone trabe:awesome-project
     $ cd awesome-project
     $ ./bin/setup
 
+--
 
--- bullets title-first
 # TESTs, TESTs, TESTs
 
 * Automatic run (guard)
 * Mocking
 * Metrics (coverage)
 
--- bullets title-first
+--
+
 # Conveniences
 
 * Transpilers: Babel, SASS, etc.
-* Debugging tools
+* Debuggers
+* Profilers
 * Live Reload. YAY!
 
---
+-- full-width-image
 
 ![Chrome tools](assets/chrome_tools_dom.png)
 
---
+-- full-width-image
 
 ![Chrome tools](assets/chrome_tools_debugger.png)
 
---
+-- full-width-image
 
 ![Chrome tools](assets/chrome_tools_network.png)
+
+-- todo
+
+Add new chrome dev tools captures
 
 -- section
 
@@ -314,7 +324,7 @@ TODO new trabeboard!
 
 ## There is no easy naming. Sorry folks!
 
---
+-- full-width-image
 
 ![Yao Ming](assets/yao.png)
 
@@ -322,7 +332,7 @@ TODO new trabeboard!
 
 # Maybe there are more hard things
 
---
+-- full-width-image
 
 ![Mother of God](assets/mother_of_god.png)
 
@@ -332,28 +342,28 @@ TODO new trabeboard!
 
 ## Use UTF-8. Use iconv wisely
 
---
+-- full-width-image
 
 ![Encoding](assets/encoding.png)
 
 --
 
-![Mail WAT](assets/mail_wat.png)
-
---
-
 # Timezones, i18n, l11n, accessibility hell
 
-## Always use UTC (beware of qwirks) __:D__
+## Always use UTC (beware of quirks)
 ## Treat i18n, l11n and accesibility as first class citizens
 
 --
 
 # Speaking of timezones...
 
---
+-- full-width-image
 
 ![TZ hell](assets/tz_hell.png)
+
+-- full-width-image
+
+![Fuck ti](assets/fuck_timezones.png)
 
 --
 
@@ -366,14 +376,14 @@ TODO new trabeboard!
 # The money hell <br/>a.k.a the floating point hell
 ## Stick to integers. Use fixed point
 
---
+-- full-width-image
 
 ![Show me the money](assets/show_me_the_money.jpg)
 
 --
 
 # Dependency hell
-## A dependency manager is not enough: e.g. npm
+## A dependency manager is not a guarantee: e.g. npm
 ## Use virtual machines (docker)
 
 --
@@ -430,10 +440,13 @@ TODO new trabeboard!
 
 --
 
-# Or use an abstraction:
+# Or use an abstraction
  * actors
  * promises
  * CSP
+
+--
+
 # Or switch to erlang :P
 
 
@@ -461,7 +474,7 @@ TODO new trabeboard!
 
 # MVC Inception
 
-## Inside an MVC webapp there is another MVC
+## Inside an MVC webapp there is another MVC app
 
 -- section
 
@@ -542,7 +555,7 @@ TODO new trabeboard!
 
 -- full-image
 
-![Hasta la vista baby](assets/hasta_la_vista_baby.png)
+![Hasta la vista baby](assets/hasta_la_vista_baby.jpg)
 
 -- section
 
@@ -674,8 +687,8 @@ TODO new trabeboard!
 
 -- quote
 
-# Can change a report if I am the author or its author is one of my subordinates and the report has not been signed
-## the customer
+>  Can change a report if I am the author or its author is one of my subordinates and the report has not been signed
+> <cite>the customer</cite>
 
 -- solution
 
@@ -763,40 +776,50 @@ TODO new trabeboard!
 
 -- code smallest
 
-    class User
-      constructor : (name) ->
-        this.name = name
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+    }
 
-    greet = (user) ->
-      if user
-        alert "Hi #{user.name}!"
-      else
-        alert "Hi stranger!"
+    const greet = function (user) {
+        if user {
+            alert(`Hi #{user.name}!`);
+        }
+        else {
+            alert("Hi stranger!");
+        }
+    }
 
-    john = new User('John')
-    keith = null
+    const john = new User('John');
+    const keith = null;
 
-    greet john    # Hi John!
-    greet keith   # Hi stranger!
+    greet(john);    # Hi John!
+    greet(keith);   # Hi stranger!
 
 -- code smallest
 
-    class User
-      constructor : (name) ->
-        this.name = name
+    class User {
+        constructor(name) {
+            this.name = name;
+        }
+    }
 
-    class Stranger extends User
-      constructor : ->
-        super 'stranger'
+    class Stranger extends User {
+        constructor() {
+            super("stranger");
+        }
+    }
 
-    greet = (user) ->
-      alert "Hi #{user.name}!"
+    const greet = function (user) {
+        alert(`Hi #{user.name}!`);
+    }
 
-    john = new User('John')
-    keith = new Stranger()
+    const john = new User('John');
+    const keith = new Stranger();
 
-    greet john    # Hi John!
-    greet keith   # Hi stranger!
+    greet(john);    # Hi John!
+    greet(keith);   # Hi stranger!
 
 -- problem
 
@@ -821,7 +844,7 @@ TODO new trabeboard!
 
 ## Data, Context, Interaction
 
--- code small
+--
 
     class BankAccount
       attr_accessor :balance
@@ -839,22 +862,22 @@ TODO new trabeboard!
       end
     end
 
--- code small
+--
+```ruby
+class TransferContext
+  def initialize(source, target, amount)
+    ...
+  end
 
-    class TransferContext
-      def initialize(source, target, amount)
-        ...
-      end
+  def run
+    source.extends TransferSoure
+    target.extends TransferTarget
 
-      def run
-        source.extends TransferSoure
-        target.extends TransferTarget
-
-        source.withdraw amount
-        target.deposit amount
-      end
-    end
-
+    source.withdraw amount
+    target.deposit amount
+  end
+end
+```
 -- bullets title-first many-bullets
 
 # DCI
@@ -880,25 +903,27 @@ TODO new trabeboard!
 
 -- code smallest
 
-    class User
-      def initialize(name, email)
-        ...
-      end
-    end
+```ruby
+class User
+  def initialize(name, email)
+    ...
+  end
+end
 
-    class UserDecorator
-      def initialize(user)
-        ...
-      end
+class UserDecorator
+  def initialize(user)
+    ...
+  end
 
-      def name
-        user.name
-      end
+  def name
+    user.name
+  end
 
-      def email
-        user.name + "<" + user.email + ">"
-      end
-    end
+  def email
+    user.name + "<" + user.email + ">"
+  end
+end
+```
 
 -- code small
 
