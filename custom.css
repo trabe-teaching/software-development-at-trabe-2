@@ -1,3 +1,11 @@
+html {
+  background: #f5f4f0 ! important;
+}
+
+section.lights-off {
+  background: #000;
+}
+
 section h1,
 section h2 {
     color: red;
@@ -9,6 +17,11 @@ section:not(.full-image) img {
 
 #sdat {
     font-size: 25px;
+}
+
+
+#sdat ul {
+  list-style-position: outside;
 }
 
 #sdat li {
