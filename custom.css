@@ -26,6 +26,7 @@ section:not(.full-image) img {
 
 #sdat li {
     font-size: 1.5em;
+    margin-left: 50px;
 }
 
 .front-page .invisible {
